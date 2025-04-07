@@ -1,4 +1,4 @@
-# Motor-Theft-Analysis
+# Motor Theft Analysis In New Zealand
 # Introduction
 Motor vehicle thefts pose a significant concern for community safety, property protection, and crime prevention. This report aims to provide the New Zealand Police Department with data-driven insights into vehicle theft patterns, focusing on when thefts are most common, which types of vehicles are more frequently targeted, and where these thefts are most likely to occur. Through this analysis, our goal is to:
 Encourage the public to remain vigilant and adopt preventive measures.
@@ -7,9 +7,10 @@ Support future strategies aimed at reducing vehicle theft rates across New Zeala
 ## Data Wrangling
 ## Data Sources
 Stolen_Vehicles Table: Contains information about stolen vehicles, including the date of theft, vehicle type, vehicle age, luxury vs. standard classification, and color.
+
 Locations Table: Contains geographic and demographic information (region name, population, density) corresponding to each reported theft.
 ## Data Analysis and Findings
-## OBJECTIVE 1: Identify When Vehicles Are Stolen
+## Objective 1: Identify When Vehicles Are Stolen
 ## Number of Vehicles Stolen Each Year
 Finding: The analysis shows that from year to year, the volume of stolen vehicles has either been steadily increasing or exhibited slight fluctuations. For instance, we might observe a 3% increase from one year to the next.
 
