@@ -2,7 +2,6 @@
 **Data-Driven Insights for Stakeholders**  
 *Prepared for: New Zealand Police – National Prevention & Intelligence  
 
-
 ---
 
 ## 1 | Executive Summary  
@@ -53,7 +52,7 @@
 
 *Insight:* Exposure risk escalates during warm-season leuisure trips and routine weekday commutes.
 
-### 5.2  WHAT vehicles are stolen? – Vehicle Characteristics  
+### 5.2  WHAT vehicles are stolen? –Vehicle Characteristics  
 
 |                | **Standard Segment** | **Luxury Segment** |
 |----------------|----------------------|--------------------|
@@ -64,7 +63,7 @@
 
 *Insight:* Older factory security remains exploitable; luxury models need relay-attack defence & GPS tracking.
 
-### 5.3  WHERE do thefts occur? – Geographic Patterns  
+### 5.3  WHERE do thefts occur? –Geographic Patterns  
 
 | **Region**  | **Thefts** | **Rate /1 000 Veh.** | **Density (pop/km²)** | **Notable Mix**           |
 |-------------|-----------:|----------------------:|----------------------:|---------------------------|
