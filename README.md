@@ -1,19 +1,19 @@
 # New Zealand Motor Vehicle Theft  
 **Data-Driven Insights for Stakeholders**  
 *Prepared for: New Zealand Police – National Prevention & Intelligence  
-Date: 24 April 2025*
+
 
 ---
 
-## 1 | Executive Snapshot  
+## 1 | Executive Summary  
 
 > Vehicle thefts are climbing ~**3 % per year (2020-24)**. Summer evenings and long-weekends add an extra **+18 % monthly spike**. A small set of mainstream body styles (median age ≈ 9 yrs) represents the bulk of crime, while late-model luxury SUVs and sports coupes are a fast-growing secondary target. Auckland posts the largest volumes, but **Southland is highest-risk once normalised (5.2 thefts per 1 000 registered vehicles)**. Targeted, season-aware policing and tailored public messaging can maximise crime-prevention ROI.
 
 ---
 
-## 2 | Report Purpose & Audience  
+## 2 | Purpose & Audience  
 
-| **Stakeholder**          | **Decision Need**                           | **Report Value**                                              |
+| **Stakeholder**          | **What they need**                           | **How this report helps**                                              |
 |--------------------------|---------------------------------------------|---------------------------------------------------------------|
 | District Commanders      | Patrol rostering & resource allocation      | Pin-points high-risk regions, days, and vehicle segments      |
 | Prevention & Comms Units | Public-awareness content                    | Timely talking points and safety tips                         |
@@ -26,7 +26,6 @@ Date: 24 April 2025*
 1. **WHEN** are vehicles stolen?  
 2. **WHAT** vehicles are most vulnerable?  
 3. **WHERE** do thefts cluster, and how does density shift risk?  
-*Secondary goals:* enhance public vigilance, guide deployment, and inform future crime-reduction strategy.
 
 ---
 
@@ -34,8 +33,8 @@ Date: 24 April 2025*
 
 | **Source**        | **Records** | **Key Fields**                                           | **Cleansing Steps**             |
 |-------------------|-------------|----------------------------------------------------------|---------------------------------|
-| `Stolen_Vehicles` | 58 642      | `theft_date`, `body_type`, `manufacture_year`, `luxury_flag`, `colour` | Removed 1.7 % nulls/dupes       |
-| `Locations`       | 58 642      | `region`, `meshblock`, `population`, `density`           | Joined on `incident_id`         |
+| `Stolen_Vehicles` | 58,642      | `theft_date`, `body_type`, `manufacture_year`, `luxury_flag`, `colour` | Removed 1.7 % nulls/dupes       |
+| `Locations`       | 58,642      | `region`, `meshblock`, `population`, `density`           | Joined on `incident_id`         |
 
 *SQL CTEs* aggregated theft counts by time, vehicle attributes, and region. Results exported to four Excel summaries (`Obj_1–Obj_4`) for visual QA.
 
@@ -43,16 +42,18 @@ Date: 24 April 2025*
 
 ## 5 | Key Findings & Implications  
 
-### 5.1  WHEN – Temporal Patterns  
+### 5.1  WHEN are vehicles stolen? –Temporal Patterns  
 
-| **Slice**  | **Result**                       | **Implication**                                   |
+| **Period**  | **Result**                       | **Implication**                                   |
 |------------|----------------------------------|---------------------------------------------------|
 | YoY trend  | +3 % compound growth (’20-’24)   | Sustained resource need                           |
 | Monthly    | Dec-Mar +18 % vs Jun-Aug         | Launch *Summer Secure* campaign; surge ANPR units |
-| Weekday    | Mon 16 %, Tue 15 %, Fri 15 %     | Evening patrol focus; neighbourhood-watch alerts  |
+| Weekday    | Mon, Tue, Fri = 46% of weekly total     | Evening patrol focus; neighbourhood-watch alerts  |
 | Hour       | 18:00-23:00 = 41 % of incidents  | Stake-outs at commuter carparks                   |
 
-### 5.2  WHAT – Vehicle Characteristics  
+*Insight:* Exposure risk escalates during warm-season leuisure trips and routine weekday commutes.
+
+### 5.2  WHAT vehicles are stolen? – Vehicle Characteristics  
 
 |                | **Standard Segment** | **Luxury Segment** |
 |----------------|----------------------|--------------------|
@@ -63,14 +64,14 @@ Date: 24 April 2025*
 
 *Insight:* Older factory security remains exploitable; luxury models need relay-attack defence & GPS tracking.
 
-### 5.3  WHERE – Geographic Patterns  
+### 5.3  WHERE do thefts occur? – Geographic Patterns  
 
 | **Region**  | **Thefts** | **Rate /1 000 Veh.** | **Density (pop/km²)** | **Notable Mix**           |
 |-------------|-----------:|----------------------:|----------------------:|---------------------------|
-| Auckland    | 18 420     | 4.8                  | 1 210                 | Sedans dominate           |
-| Canterbury  | 8 960      | 3.9                  | 720                   | Mirrors Auckland          |
-| Wellington  | 6 230      | 4.6                  | 900                   | Hatchbacks high           |
-| **Southland** | **1 150** | **5.2**              | 10                    | Pick-ups & farm utes      |
+| Auckland    | 18,420     | 4.8                  | 1,210                 | Sedans dominate           |
+| Canterbury  | 8,960      | 3.9                  | 720                   | Mirrors Auckland          |
+| Wellington  | 6,230      | 4.6                  | 900                   | Hatchbacks           |
+| **Southland** | **1,150** | **5.2**              | 10                    | Pick-ups & farm utes      |
 
 *Density effect:* High-density suburbs offer anonymity; rural areas suffer isolation & low CCTV – each needs distinct tactics.
 
